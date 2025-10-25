@@ -1,0 +1,43 @@
+{
+    "states": [
+        "q0",
+        "q1",
+        "q2mq_accept"
+    ],
+    "initial": "q0",
+    "accept": [
+        "q_accept"
+    ],
+    "tape_alphabet": [
+        "1",
+        "_"
+    ],
+    "transitions": {
+        "q0,1": [
+            "q0",
+            "1",
+            "R"
+        ],
+        "q0,_": [
+            "q1",
+            "1",
+            "L"
+        ],
+        "q1,1": [
+            "q2",
+            "1",
+            "R"
+        ],
+        "q2,1": [
+            "q_accept",
+            "1",
+            "N"
+        ],
+        "q2,_": [
+            "q_accept",
+            "_",
+            "N"
+        ]
+    },
+    "tape_input": "111"
+}
